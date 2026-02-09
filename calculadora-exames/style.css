@@ -1,0 +1,128 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #001a4d;
+}
+
+.container {
+  width: 400px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #001a4d 0%, #003d99 100%);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+  width: 60px;
+  max-width: 70px;
+}
+
+.clinic-name {
+  color: #d4af37;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  text-align: center;
+  color: #001a4d;
+  margin: 20px 0 15px 0;
+  padding: 0 25px;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 0 25px 15px 25px;
+  border: 2px solid #d4af37;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 25px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  color: #001a4d;
+  transition: all 0.2s ease;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background: #f5f5f5;
+  padding-left: 5px;
+  color: #d4af37;
+}
+
+li strong {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+h2 {
+  color: #001a4d;
+  margin: 20px 25px 10px 25px;
+  font-size: 18px;
+}
+
+#total {
+  color: #d4af37;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  width: calc(100% - 50px);
+  margin: 15px 25px 25px 25px;
+  padding: 12px;
+  background: linear-gradient(135deg, #001a4d 0%, #003d99 100%);
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #003d99 0%, #001a4d 100%);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
