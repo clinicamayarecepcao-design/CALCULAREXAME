@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora de Exames</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <svg class="logo" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+          .cm-text { font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 3px; }
+        </style>
+      </defs>
+      <text x="60" y="75" font-size="60" text-anchor="middle" class="cm-text" fill="none" stroke="#d4af37" stroke-width="0.5"></text>
+      <text x="60" y="75" font-size="60" text-anchor="middle" class="cm-text" fill="#d4af37">CM</text>
+    </svg>
+    <h2 class="clinic-name">CLINICA MAYA</h2>
+  </div>
+  <h1>Calculadora de Exames Laboratoriais</h1>
+
+  <input type="text" id="search" placeholder="Digite o nome do exame">
+
+  <ul id="results"></ul>
+
+  <h2>Total: R$ <span id="total">0.00</span></h2>
+
+  <button onclick="limpar()">Limpar</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
