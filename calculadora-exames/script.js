@@ -2,7 +2,9 @@ let exames = [];
 let total = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
- fetch('https://raw.githubusercontent.com/clinicamayarecepcao-design/CALCULAREXAME/main/calculadora-exames/exames.json')
+  fetch('./exames.json')
+    .then(res => {
+      console.log('Tentando carregar exames.json...');
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       return res.json();
     })
