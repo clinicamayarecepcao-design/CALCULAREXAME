@@ -1,16 +1,1 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('exames.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-            // Code to handle the fetched data
-        })
-        .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
-        });
-});
+let exames = [];\nlet total = 0;\n\ndocument.addEventListener('DOMContentLoaded', function() {\n  fetch('exames.json')\n    .then(res => {\n      console.log('Tentando carregar exames.json...');\n      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);\n      return res.json();\n    })\n    .then(data => {\n      exames = data;\n      console.log('✅ Exames carregados com sucesso:', exames.length, 'itens');\n    })\n    .catch(err => console.error('❌ Erro ao carregar exames:', err));\n\n  const searchInput = document.getElementById('search');\n  const results = document.getElementById('results');\n  const totalSpan = document.getElementById('total');\n\n  if (!searchInput || !results || !totalSpan) {\n    console.error('❌ Elementos do DOM não encontrados!');\n    return;\n  }\n\n  searchInput.addEventListener('input', () => {\n    results.innerHTML = '';\n    const termo = searchInput.value.toLowerCase();\n\n    if (termo.length === 0) return;\n\n    exames\n      .filter(e => e.nome.toLowerCase().includes(termo))\n      .forEach(exame => {\n        const li = document.createElement('li');\n        li.innerHTML = exame.nome + ' <strong>R$ ' + Number(exame.preco).toFixed(2) + '</strong>';\n        li.onclick = () => adicionar(exame);\n        results.appendChild(li);\n      });\n  });\n});\n\nfunction adicionar(exame) {\n  total += parseFloat(exame.preco) || 0;\n  document.getElementById('total').textContent = total.toFixed(2);\n  document.getElementById('search').value = '';\n  document.getElementById('results').innerHTML = '';\n}\n\nfunction limpar() {\n  total = 0;\n  document.getElementById('total').textContent = '0.00';\n}
