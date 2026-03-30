@@ -181,5 +181,16 @@
   {"id":180,"nome":"Calprotectina Fecal", "preco": 140.00 },
   {"id":181,"nome": "Eletroforese de Hemoglobina", "preco": 45.00 },
   {"id":182,"nome": "Teste de Falcização", "preco": 60.00 },
-  {"id":183,"nome": "IgG", "preco": 45.00 }
+  {"id":183,"nome": "Vitamina E", "preco": 120.00 },
+  {"id":184,"nome": "Vitamina A", "preco": 125.00 },
+  {"id":185,"nome": "Anti Mulleriano", "preco": 710.00 },
+  {"id":186,"nome": "Lipase", "preco": 35.00 },
+  {"id":187,"nome": "Anti RO", "preco": 65.00 },
+  {"id":185,"nome": "Anti LA", "preco": 65.00 },
+  {"id":186,"nome": "Polimorfi.Gene PAI-1", "preco": 390.00 },
+  {"id":187,"nome": "TROPONINA ", "preco": 90.00 },
+  {"id":188,"nome": "TROPONINA ", "preco": 90.00 },
+  {"id":188,"nome": "Parvovirus B12 ", "preco": 220.00 },
+  {"id":189,"nome": "IgG", "preco": 45.00 }
+  
 ]
